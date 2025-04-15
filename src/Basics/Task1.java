@@ -12,6 +12,6 @@ public class Task1 {
         task1.print("Hello World");
     }
     public void print(String string) {
-        System.out.print(string);
+        System.out.println(string);
     }
 }
