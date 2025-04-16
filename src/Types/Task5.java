@@ -9,7 +9,7 @@ package Types;
 
 public class Task5 {
 
-    public String TimeInsSeconds(long timeInSeconds) {
+    public static String TimeInsSeconds(long timeInSeconds) {
         int timeInWeek = (int) (timeInSeconds / 604800);
         int timeAfterWeek = (int) (timeInSeconds % 604800);
         int timeInDay = timeAfterWeek / 86400;
@@ -23,7 +23,6 @@ public class Task5 {
     }
     public static void main(String[] args) {
         long timeInSeconds = 51818151116l;
-        Task5 task5 = new Task5();
-        System.out.printf(task5.TimeInsSeconds(timeInSeconds));
+        System.out.printf(TimeInsSeconds(timeInSeconds));
     }
 }
