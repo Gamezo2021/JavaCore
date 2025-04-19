@@ -1,18 +1,13 @@
 package Basics;
-import Basics.Task1;
+import static Basics.Task1.print;
 
 /** Задание 2
  Вывести Hello Java и Hello Belarus. Использовать метод из задания 1, импортировать двумя способами.
  */
 
-public class Task2 extends Task1 {
+public class Task2 {
     public static void main(String[] args) {
-        Task1 task1 = new Task1();
-        task1.print("Hello Java");
-        Task2 task2 = new Task2();
-        task2.printMessege("Belarus");
-    }
-    public void printMessege(String str) {
-        print("Hello " + str);
+        print("Hello Java");
+        Basics.Task1.print("Hello Belarus");
     }
 }
