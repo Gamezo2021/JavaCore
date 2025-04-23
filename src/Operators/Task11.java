@@ -1,5 +1,13 @@
 package Operators;
 
+/**
+ * Задание 11
+ * <p>
+ * Написать метод, который выводит расписание на неделю.
+ * Задать на вход в метод порядковый номер дня недели и отобразить на экране то, что запланировано на этот день.
+ * Сделать двумя способами, например с if и switch в разных классах. System.out.println() в main.
+ */
+
 public class Task11 {
     public static void main(String[] args) {
         String day = "Sunday";
@@ -32,7 +40,7 @@ class diaryWithIf {
 
 class diaryWithSwitch {
     public static String diaryWithSwitch(String day) {
-        switch (day){
+        switch (day) {
             case "Sunday":
                 day = "work on sunday";
                 break;
