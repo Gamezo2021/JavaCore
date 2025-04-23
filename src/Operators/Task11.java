@@ -32,7 +32,7 @@ class diaryWithIf {
 
 class diaryWithSwitch {
     public static String diaryWithSwitch(String day) {
-        switch (day) {
+        switch (day){
             case "Sunday":
                 day = "work on sunday";
                 break;
