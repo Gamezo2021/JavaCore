@@ -8,7 +8,7 @@ package Operators;
  * Логика в методе. System.out.println() в main
  */
 
-public class Task12 {
+public class OperatorsFinalTask {
     public static void main(String[] args) {
         int x = 1;
         int y = 2;
