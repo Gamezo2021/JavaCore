@@ -1,5 +1,12 @@
 package Loops;
 
+/**
+ * Задание 14
+ * <p>
+ * Посчитать сумму цифр любого, в том числе очень большого целого числа с помощью цикла do while.
+ * Логика в методе. System.out.println() в main.
+ */
+
 
 public class Task14 {
     public static void main(String[] args) {
