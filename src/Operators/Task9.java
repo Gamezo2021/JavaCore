@@ -5,13 +5,14 @@ package Operators;
  * Задать три числа – день, месяц, год. Вывести на экран в виде трех чисел дату следующего дня.
  * Не использовать классы для работы с датами, только операторы. Использовать несколько методов.
  * Сделать двумя способами, например с if и switch в разных классах. Импортировать методы из другого класса.
+ * нет проверки на введеную дату, также не работает 31.12.2024
  */
 
 public class Task9 {
     public static void main(String[] args) {
         int day = 28;
         int month = 2;
-        int year = 2021;
+        int year = 400;
         new NextDayWithIf(day, month, year);
         new NextDayWithswitch(day, month, year);
     }
