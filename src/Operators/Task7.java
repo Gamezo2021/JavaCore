@@ -12,14 +12,14 @@ public class Task7 {
         int a = 10;
         int b = 20;
         int r = 15;
-        int d = r * 2;
-        System.out.print(checkСlosing(a, b, d));
+
+        System.out.print(checkСlosing(a, b, r));
 
 
     }
 
-    public static boolean checkСlosing(int a, int b, int d) {
-        if (d >= (Math.sqrt(a * a + b * b))) {
+    public static boolean checkСlosing(int a, int b, int r) {
+        if (r * 2 >= (Math.sqrt(a * a + b * b))) {
             return true;
         }
         return false;
