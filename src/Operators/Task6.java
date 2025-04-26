@@ -8,13 +8,11 @@ package Operators;
 
 public class Task6 {
     public static void main(String[] args) {
-        boolean result = NumberСheck(100557);
-        System.out.printf(String.valueOf(result));
+        System.out.print(NumberСheck(-7));
     }
+
     public static boolean NumberСheck(int number) {
-        if (number == 7 | number % 10 == 7){
-            return true;
-        }return false;
+        return Math.abs(number) % 10 == 7;
     }
 }
 
