@@ -10,9 +10,9 @@ package Operators;
 
 public class Task9 {
     public static void main(String[] args) {
-        int day = 28;
+        int day = 29;
         int month = 2;
-        int year = 400;
+        int year = 2020;
         new NextDayWithIf(day, month, year);
         new NextDayWithswitch(day, month, year);
     }
@@ -23,20 +23,29 @@ class NextDayWithIf {
         if (day == 31 && month == 1 | month == 3 | month == 5 | month == 7 | month == 8 | month == 10 | month == 12) {
             day = 1;
             month++;
-            if (month == 12) {
+            if (month == 13) {
                 ++year;
                 month = 1;
             }
+            System.out.println("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
         } else if (day == 30 && month == 4 | month == 6 | month == 9 | month == 11) {
             day = 1;
             ++month;
+            System.out.println("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
         } else if (day == 28 && month == 2 && year % 4 == 0) {
             ++day;
+            System.out.println("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
         } else if (day == 28 && month == 2) {
             day = 1;
             ++month;
-        } else ++day;
-        System.out.printf("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+            System.out.println("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+        } else if ((day >= 1 && day <= 30 && month == 1 | month == 3 | month == 5 | month == 7 | month == 8 | month == 10 | month == 12) || (day >= 1 && day <= 29 && month == 4 | month == 6 | month == 9 | month == 11) || (day >= 1 && day <= 27) && month == 2) {
+            day++;
+            System.out.println("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+        } else {
+            System.out.println("Неккоректая дата ");
+        }
+
     }
 }
 
