@@ -10,7 +10,9 @@ package Types;
 
 public class Task4 {
     public static void main(String[] args) {
-        System.out.println(mathOperation(2,10));
+        int a = 4;
+        int b = 3;
+        System.out.println(mathOperation(a,b));
     }
     public static int mathOperation(int a, int b) {
         return (a + b) + (a * b);

@@ -15,12 +15,15 @@ public class Task5 {
     }
 
     public static String TimeInsSeconds(long timeInSeconds) {
-        int timeInWeek = (int) (timeInSeconds / 604800);
-        int timeAfterWeek = (int) (timeInSeconds % 604800);
-        int timeInDay = timeAfterWeek / 86400;
-        int timeAfterDay = timeAfterWeek % 86400;
-        int timeInHour = timeAfterDay / 3600;
-        int timeAfterHour = timeAfterDay % 3600;
+        int SecondsInWeek = 60 * 60 * 24 * 7;
+        int SecondsInDay =  60 * 60 * 24 ;
+        int SecondsInHour = 60 * 60;
+        int timeInWeek = (int) (timeInSeconds /SecondsInWeek);
+        int timeAfterWeek = (int) (timeInSeconds % SecondsInWeek);
+        int timeInDay = timeAfterWeek / SecondsInDay;
+        int timeAfterDay = timeAfterWeek % SecondsInDay;
+        int timeInHour = timeAfterDay / SecondsInHour;
+        int timeAfterHour = timeAfterDay % SecondsInHour;
         int timeInMinutes = timeAfterHour / 60;
         int TimeInSeconds = timeAfterDay % 60;
         String TimeInSecondsString = "Weeks: " + timeInWeek + " Days:" + timeInDay + " Hours:" + timeInHour + " Minutes:" + timeInMinutes + " Seconds:" + TimeInSeconds;
