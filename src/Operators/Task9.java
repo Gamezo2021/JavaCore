@@ -10,7 +10,7 @@ package Operators;
 
 public class Task9 {
     public static void main(String[] args) {
-        int day = 29;
+        int day = 27;
         int month = 2;
         int year = 2020;
         new NextDayWithIf(day, month, year);
@@ -51,78 +51,128 @@ class NextDayWithIf {
 
 class NextDayWithswitch {
     public NextDayWithswitch(int day, int month, int year) {
-        switch (day) {
-            case 31:
-                switch (month) {
-                    case 1:
-                        day = 1;
-                        month++;
-                        break;
-                    case 3:
-                        day = 1;
-                        month++;
-                        break;
-                    case 5:
-                        day = 1;
-                        month++;
-                        break;
-                    case 7:
-                        day = 1;
-                        month++;
-                        break;
-                    case 8:
-                        day = 1;
-                        month++;
-                        break;
-                    case 10:
-                        day = 1;
-                        month++;
-                        break;
-                    case 12:
-                        day = 1;
-                        month = 1;
-                        year++;
-                        break;
-                }
+        switch (day){
+            case 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27:
+                day++;
                 break;
-            case 30:
-                switch (month) {
-                    case 4:
-                        day = 1;
-                        month++;
-                        break;
-                    case 6:
-                        day = 1;
-                        month++;
-                        break;
-                    case 9:
-                        day = 1;
-                        month++;
-                        break;
-                    case 11:
-                        day = 1;
-                        month++;
-                        break;
-                }
             case 28:
-                switch (year % 4) {
-                    case 0:
-                        day++;
-                        break;
+                switch (month){
+                    case 2:
+                        switch (year % 4){
+                            case 0:
+                                day++;
+                        } switch (day){
+                            case 28:
+                                day++;
+                    }
                 }
-                switch (day) {
-                    case 28:
-                        day = 1;
-                        month++;
-                        break;
-                }
-                break;
-            default:
-                ++day;
+
+
         }
         System.out.printf("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+        }
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        switch (day) {
+//            case 31:
+//                switch (month) {
+//                    case 1:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 3:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 5:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 7:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 8:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 10:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 12:
+//                        day = 1;
+//                        month = 1;
+//                        year++;
+//                        break;
+//                }
+//                System.out.printf("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+//                break;
+//            case 30:
+//                switch (month) {
+//                    case 4:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 6:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 9:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                    case 11:
+//                        day = 1;
+//                        month++;
+//                        break;
+//
+//                }
+//                System.out.printf("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+//                break;
+//            case 28:
+//                switch (year % 4) {
+//                    case 0:
+//                        day++;
+//                        break;
+//                }
+//                switch (day) {
+//                    case 28:
+//                        day = 1;
+//                        month++;
+//                        break;
+//                }
+//                System.out.printf("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+//                break;
+//
+//            case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27:
+//                ++day;
+//                System.out.printf("Day: " + day + "\nMonth: " + month + "\nYear: " + year + "\n");
+//            default:
+//                System.out.print("Неверная дата ");
+//        }
+
 
 
 
