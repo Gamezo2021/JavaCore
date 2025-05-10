@@ -10,61 +10,63 @@ package Operators;
 
 public class Task11 {
     public static void main(String[] args) {
-        String day = "Sunday";
-        System.out.println(diaryWithIf.diaryWithIf(day));
-        System.out.println(diaryWithSwitch.diaryWithSwitch(day));
+        int nomberOfDayInWeek = 7;
+        System.out.println(diaryWithIf.diaryWithIf(nomberOfDayInWeek));
+        System.out.println(diaryWithSwitch.diaryWithSwitch(nomberOfDayInWeek));
     }
 
 }
 
 class diaryWithIf {
-    public static String diaryWithIf(String day) {
-        if (day.equals("Sunday")) {
-            day = "Work on Sunday";
-        } else if (day.equals("Monday")) {
-            day = "Work on Monday";
-        } else if (day.equals("Tuesday")) {
-            day = "Work on Tuesday";
-        } else if (day.equals("Wednesday")) {
-            day = "Work on Wednesday";
-        } else if (day.equals("Thursday")) {
-            day = "Work on Thursday";
-        } else if (day.equals("Friday")) {
-            day = "Work on Friday";
-        } else if (day.equals("Saturday")) {
-            day = "Work on Saturday";
-        } else day = "There is no such day";
-        return day;
+    public static String diaryWithIf(int nomberOfDayInWeek) {
+        String planForTheDay = " ";
+        if (nomberOfDayInWeek == 1) {
+            planForTheDay = "Work on Sunday";
+        } else if (nomberOfDayInWeek == 2) {
+            planForTheDay = "Work on Monday";
+        } else if (nomberOfDayInWeek == 3) {
+            planForTheDay = "Work on Tuesday";
+        } else if (nomberOfDayInWeek == 4) {
+            planForTheDay = "Work on Wednesday";
+        } else if (nomberOfDayInWeek == 5) {
+            planForTheDay = "Work on Thursday";
+        } else if (nomberOfDayInWeek == 6) {
+            planForTheDay = "Work on Friday";
+        } else if (nomberOfDayInWeek == 7) {
+            planForTheDay = "Work on Saturday";
+        } else planForTheDay = "There is no such day";
+        return planForTheDay;
     }
 }
 
 class diaryWithSwitch {
-    public static String diaryWithSwitch(String day) {
-        switch (day) {
-            case "Sunday":
-                day = "work on sunday";
+    public static String diaryWithSwitch(int nomberOfDayInWeek) {
+        String planForTheDay = " ";
+        switch (nomberOfDayInWeek) {
+            case 1:
+                planForTheDay = "work on sunday";
                 break;
-            case "Monday":
-                day = "work on monday";
+            case 2:
+                planForTheDay = "work on monday";
                 break;
-            case "Tuesday":
-                day = "work on tuesday";
+            case 3:
+                planForTheDay = "work on tuesday";
                 break;
-            case "Wednesday":
-                day = "work on wednesday";
+            case 4:
+                planForTheDay = "work on wednesday";
                 break;
-            case "Thursday":
-                day = "work on thursday";
+            case 5:
+                planForTheDay = "work on thursday";
                 break;
-            case "Friday":
-                day = "work on friday";
+            case 6:
+                planForTheDay = "work on friday";
                 break;
-            case "Saturday":
-                day = "work on saturday";
+            case 7:
+                planForTheDay = "work on saturday";
                 break;
             default:
-                day = "There is no such day";
+                planForTheDay = "There is no such day";
         }
-        return day;
+        return planForTheDay;
     }
 }
