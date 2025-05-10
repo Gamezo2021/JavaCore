@@ -1,5 +1,6 @@
 package Loops;
 
+import java.math.BigInteger;
 import java.text.DecimalFormat;
 
 /**
@@ -14,12 +15,13 @@ public class Task13 {
         System.out.print(" Произведение чисел от 1 до 25 = " + df.format(mathCheck()));
     }
 
-    public static long mathCheck() {
+    public static BigInteger mathCheck() {
         int i = 1;
-        long sum = 1;
+        BigInteger sum = BigInteger.valueOf(1);
         do {
-            sum *= i;
+            sum = sum.multiply(BigInteger.valueOf(i));
             i++;
+
         }
         while (i <= 25);
         return sum;
