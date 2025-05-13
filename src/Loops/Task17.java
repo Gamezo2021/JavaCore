@@ -1,5 +1,7 @@
 package Loops;
 
+import java.text.DecimalFormat;
+
 /**
  * Задание 17
  * Задать произвольное целое число и вывести его в бухгалтерском формате,
@@ -10,30 +12,19 @@ package Loops;
 
 public class Task17 {
     public static void main(String[] args) {
-        System.out.print(numberFormatting());
+        long number = 11230000000456L;
+        DecimalFormat df = new DecimalFormat("###,###.##");
+        Long i = Long.parseLong(numberFormatting(number));
+        System.out.print(df.format(i));
     }
 
-    public static String numberFormatting() {
-        int a = 12578645;
-        String s = " ";
-        String temp = "";
-        String temp1 = "";
-        String temp2 = "";
-        while (a != 0) {
-
-            int b = a % 1000;
-            a = a / 1000;
-            if (temp == "") {
-                temp += s + b;
-            } else if (temp1 == "") {
-                temp1 += s + b;
-            } else if (temp2 == "") {
-                temp2 += s + b;
-            }
-
+    public static String numberFormatting(long number) {
+        StringBuilder temp = new StringBuilder();
+        while (number != 0) {
+            long b = number % 10;
+            number = number / 10;
+            temp.append(b);
         }
-        return temp2 + temp1 + temp;
-
-
+        return temp.reverse().toString();
     }
 }
