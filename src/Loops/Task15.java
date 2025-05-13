@@ -9,17 +9,25 @@ package Loops;
 
 public class Task15 {
     public static void main(String[] args) {
-        System.out.print(primeNumber());
+        int start = 5;
+        int end = 60;
+        System.out.print(isPrime(start, end));
     }
 
-    public static int primeNumber() {
-
+    public static int isPrime(int start, int end) {
         int i;
-        for (i = 1; i <= 10; ++i) {
-            if (i / i == 1 && i / 1 == i) {
-                if (i == 2 || i == 1) {
-                    continue;
+        int count = 0;
+        for (i = start; i <= end; i++) {
+            int sum = 0;
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    sum++;
                 }
+            }
+            if (sum == 0) {
+                count++;
+            }
+            if (count == 2) {
                 break;
             }
         }
