@@ -11,15 +11,15 @@ public class Task16 {
     }
 
     public static String divisionBySeven() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         String s = " Hope! ";
 
         for (int i = 1; i < 100; i++) {
             if (i % 7 == 0) {
-                result += i + s;
+                result.append(i).append(s);
             }
         }
-        return result;
+        return result.toString();
 
     }
 }
