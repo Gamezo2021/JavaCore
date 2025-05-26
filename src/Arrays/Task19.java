@@ -16,7 +16,7 @@ import static Arrays.Task18.FillingTheArray;
 
 public class Task19 {
     public static void main(String[] args) {
-        int [] array = new int[10];
+        int [] array = new int[12];
         System.out.println("Изначальный массив " + Arrays.toString(FillingTheArray(array)));
 
         System.out.println("Четные элементы массива " + Arrays.toString(evenArray(array)));
@@ -24,7 +24,7 @@ public class Task19 {
     private static int[] evenArray(int [] array){
         int count = 0;
         for (int i = 0; i < array.length;i++){
-            if (i%2 == 0){
+            if (i%2 != 0){
                 count++;
             }
         }
