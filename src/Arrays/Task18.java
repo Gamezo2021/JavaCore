@@ -17,7 +17,7 @@ public class Task18 {
 
     }
 
-    private static int[] FillingTheArray(int[] myArray) {
+    public static int[] FillingTheArray(int[] myArray) {
 
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = (int) (Math.random() * 10);
