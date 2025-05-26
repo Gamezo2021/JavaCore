@@ -21,7 +21,7 @@ public class Task19 {
 
         System.out.println("Четные элементы массива " + Arrays.toString(evenArray(array)));
     }
-    private static int[] evenArray(int [] array){
+    protected static int[] evenArray(int [] array){
         int count = 0;
         for (int i = 0; i < array.length;i++){
             if (i%2 != 0){

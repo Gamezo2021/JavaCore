@@ -17,7 +17,7 @@ public class Task18 {
 
     }
 
-    public static int[] FillingTheArray(int[] myArray) {
+    protected static int[] FillingTheArray(int[] myArray) {
 
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = (int) (Math.random() * 10);
@@ -26,7 +26,7 @@ public class Task18 {
         return myArray;
     }
 
-    private static int lastElementOfArray(int[] myArray) {
+    protected static int lastElementOfArray(int[] myArray) {
         return myArray[myArray.length - 1];
     }
 }
