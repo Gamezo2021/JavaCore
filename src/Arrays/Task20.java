@@ -17,8 +17,7 @@ public class Task20 {
         int[] array = new int[10];
         System.out.println("Исходный массив " + Arrays.toString(FillingTheArray(array)));
         System.out.println("Максимальный элемент = " + MaxElement(array));
-        System.out.println("Индекс максимального элемента = " + indexOfMaxElement(array, MaxElement(array)));
-
+        System.out.println("Индекс максимального элемента = " + indexOfSearchElement(array, MaxElement(array)));
     }
 
     protected static int MaxElement(int[] array) {
@@ -31,12 +30,11 @@ public class Task20 {
         return maxElement;
     }
 
-    protected static int indexOfMaxElement(int[] array, int maxElement) {
+    protected static int indexOfSearchElement(int[] array, int element) {
         int index = 0;
         for (int i = 0; i < array.length; i++) {
             index++;
-            if (array[i] == maxElement) break;
-
+            if (array[i] == element) break;
         }
         return index;
     }
