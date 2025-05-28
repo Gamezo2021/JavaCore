@@ -33,8 +33,9 @@ public class Task20 {
     protected static int indexOfSearchElement(int[] array, int element) {
         int index = 0;
         for (int i = 0; i < array.length; i++) {
-            index++;
             if (array[i] == element) break;
+            index++;
+
         }
         return index;
     }
