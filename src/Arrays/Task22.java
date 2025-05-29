@@ -1,4 +1,5 @@
 package Arrays;
+
 import java.util.Arrays;
 
 import static Arrays.Task18.FillingTheArray;
@@ -13,24 +14,34 @@ import static Arrays.Task18.FillingTheArray;
 
 public class Task22 {
     public static void main(String[] args) {
-        int[]array = new int[10];
+        int[] array = new int[11];
+
         System.out.println("Изначальный массив " + Arrays.toString(FillingTheArray(array)));
         System.out.println("Перевернутый массив " + Arrays.toString(ArrayConversely(array)));
     }
-    protected static int[] ArrayConversely(int[] array){
+
+    protected static int[] ArrayConversely(int[] array) {
 
         int count1 = 0;
-        int count  = array.length;
-        for (int i = 0; i<array.length; i++){
-
-            for (int b = count-1;;){
-                array[i] = array [b];
+        int count = array.length;
+        int b = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i + 1 == b) break;
+            if (i + 1 == b - 1) {
+                count1 = array[i];
+                array[i] = array[b - 1];
+                array[b - 1] = count1;
                 break;
-
+            }
+            count1 = array[i];
+            for (b = count - 1; ; ) {
+                array[i] = array[b];
+                array[b] = count1;
+                break;
             }
             count--;
 
-
         }
-    return array;}
+        return array;
+    }
 }
