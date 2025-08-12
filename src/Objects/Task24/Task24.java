@@ -11,8 +11,8 @@ package Objects.Task24;
  */
 public class Task24 {
     public static void main(String[] args) {
-        PeriodOfTime periodOfTime = new PeriodOfTime(109210);
-        PeriodOfTime periodOfTime1 = new PeriodOfTime(10, 20, 30);
+        PeriodOfTime periodOfTime = new PeriodOfTime(-109210);
+        PeriodOfTime periodOfTime1 = new PeriodOfTime(-10, 20, 30);
         periodOfTime.printTime();
         System.out.println("Общее колличество секунд " + periodOfTime.timeInSeconds(periodOfTime.getSeconds(), periodOfTime.getMinutes(), periodOfTime.getHour()));
         periodOfTime1.printTime();

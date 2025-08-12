@@ -6,12 +6,20 @@ public class PeriodOfTime implements Comparable<PeriodOfTime> {
     private int hour;
 
     public PeriodOfTime(int seconds, int minutes, int hour) {
+        if (seconds < 0 || minutes < 0 || hour < 0) {
+            System.out.println("Неверное время, время не может быть отрицательным");
+            return;
+        }
         this.seconds = seconds;
         this.minutes = minutes;
         this.hour = hour;
     }
 
     public PeriodOfTime(int seconds) {
+        if (seconds < 0) {
+            System.out.println("Неверное время, время не может быть отрицательным");
+            return;
+        }
         this.hour = seconds / 3600;
         this.minutes = seconds % 3600 / 60;
         this.seconds = seconds % 60;
