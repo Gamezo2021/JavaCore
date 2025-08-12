@@ -15,7 +15,7 @@ import java.util.SortedMap;
 
 public class Task25 {
     public static void main(String[] args) {
-        ATM atm = new ATM(3, 1, 2);
+        ATM atm = new ATM(3, 1, 5);
         //System.out.print("Изначальное колличество купюр в банкомате :");
         //atm.printBalance();
 
@@ -42,9 +42,13 @@ public class Task25 {
         } else if (choice == 3) {
             System.out.println("Вы выбрали снятие денег");
             System.out.println("Введите сумму денег для снятия");
-            int sumCash = scanner.nextInt();
-            atm.withdrawMoney(sumCash);
-            System.out.println("Количество купюр после снятия ");
+            int outSum = scanner.nextInt();
+            if (outSum < 0) {
+                System.out.println("Нельзя снять отрицательную сумму денег");
+                return;
+            }
+            atm.withdrawMoney(outSum);
+            //  System.out.println("Сумма и количество купюр после снятия ");
             atm.printBalance();
         } else System.out.print("некорректный выбор");
 
