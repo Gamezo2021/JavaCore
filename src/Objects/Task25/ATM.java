@@ -45,21 +45,31 @@ public class ATM {
         int count100 = 0;
         int count50 = 0;
         int count20 = 0;
+        int outBanknote20 = this.banknote20;
+        int outBanknote50 = this.banknote50;
+        int outBanknote100 = this.banknote100;
         if (sumCash() < outSum){
             System.out.println("Денег в банкомате не хватает");
             return false;
         }
-        for (count100 = 0 ; outSum - 100 >= 0 && this.banknote100 > 0; count100++){
-            this.banknote100--;
+        for (count100 = 0 ; outSum - 100 >= 0 && outBanknote100 > 0; count100++){
+            outBanknote100--;
             outSum = outSum - 100;
-        }for (count50 = 0; outSum - 50 >= 0 &&this.banknote50 > 0; count50++){
-            this.banknote50--;
+        }for (count50 = 0; outSum - 50 >= 0 &&outBanknote50 > 0; count50++){
+            outBanknote50--;
             outSum = outSum - 50;
-        }for (count20 = 0; outSum - 20 >= 0 &&this.banknote20 > 0; count20++){
-            this.banknote20 --;
+        }for (count20 = 0; outSum - 20 >= 0 &&outBanknote20 > 0; count20++){
+            outBanknote20 --;
             outSum = outSum - 20;
         }
-        System.out.println("Деньги сняты следующими купюрами : " + "номиналом 100 рублей " + count100 + " номиналом 50 рублей " + count50 + " номиналом 20 рублей " + count20);
+        if (outSum>0){
+            System.out.println("В банкомате не хватает купюр для снятия наличных");
+            return false;
+        }
+        this.banknote100 = outBanknote100;
+        this.banknote50 = outBanknote50;
+        this.banknote20 = outBanknote20;
+        System.out.println("Деньги сняты следующими купюрами : " + "номиналом 100 рублей - " + count100 + ", номиналом 50 рублей - " + count50 + ", номиналом 20 рублей - " + count20);
 
         return true;
     }
