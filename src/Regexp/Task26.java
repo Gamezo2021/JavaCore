@@ -1,6 +1,7 @@
 package Regexp;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -11,10 +12,16 @@ import java.util.regex.Pattern;
 
 public class Task26 {
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile(",+.+:+;+?+!+-");
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите строку");
-        String str = scanner.nextLine();
-        System.out.println(str);
+
+        System.out.println("Введите строку для поиска знаков препинания ");
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
+        int count = 0;
+        Pattern p = Pattern.compile("\\?[?!.]*|\\![!?.]*|[.,:-]");
+        Matcher m = p.matcher(str);
+        while (m.find()) {
+            count++;
+        }
+        System.out.println("Колличество знаков препинанаия = " + count);
     }
 }
